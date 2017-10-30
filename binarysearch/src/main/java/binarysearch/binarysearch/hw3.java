@@ -64,14 +64,22 @@ arr[0]=firstelement;
 
 for (int i=1;i<listelements.size()+1;i++)
 	  arr[i]=listelements.get(i-1);
-
-if(typeelement.compareTo("s")==0)
-	  System.out.println(binarySearch(arr,keyelement));
-else
-	  System.out.println(binarySearch(arr,keyelement));
-
-	}
-
+int c;
+if(typeelement.compareTo("s")==0){
+	c=binarySearch(arr,keyelement);
+	if(c==-1)
+	  System.out.println("0");
+	else
+	System.out.println("1")	;
+}else if(typeelement.compareTo("i")==0){
+	 c=binarySearch(arr,keyelement);
+	if(c==-1)
+	  System.out.println("0");
+	else
+	System.out.println("1")	;
+	
+}
+}
 catch( ParseException exp ) {
 	    System.out.println( "Unexpected exception:" + exp.getMessage() );
 	}
