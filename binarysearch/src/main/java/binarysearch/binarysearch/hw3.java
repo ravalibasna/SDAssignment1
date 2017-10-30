@@ -10,7 +10,7 @@ import org.apache.commons.cli.ParseException;
 
 public class hw3 {
 	 
-	public static int binarySearch( Comparable [ ] a, Comparable x )
+	public static int binarySearch( Comparable [ ] a, Comparable key )
   {
       int first = 0;
       int last = a.length - 1;
@@ -20,9 +20,9 @@ public class hw3 {
       {
           mid = ( first + last ) / 2;
 
-          if( a[ mid ].compareTo( x ) < 0 )
+          if( a[ mid ].compareTo( key ) < 0 )
               first = mid + 1;
-          else if( a[ mid ].compareTo( x ) > 0 )
+          else if( a[ mid ].compareTo( key ) > 0 )
               last = mid - 1;
           else
               return mid;
